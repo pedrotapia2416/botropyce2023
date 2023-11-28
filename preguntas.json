@@ -18,7 +18,7 @@
     { "text": "Quiero contactar a un agente", "nextQuestion": "inicioContactarAgente" }
 ]
 },
-{ "id": "inicioQuieroSerProveedor", "content": "Conoce cómo gestionar:", "options": [
+{ "id": "inicioQuieroSerProveedor", "content": "Conoce cómo gestionar: \n\n <hr><b>Acceso a ComprasPúblicas:</b>\n Es el primer paso para ser parte del Registro Oficial de Proveedores y Contratistas del Estado (ROPyCE) y participar en procedimientos electrónicos.No tiene vencimiento.\n\n <b>Inscripción en ROPyCE:</b> \n Con la Inscripción en ROPyCE, podrás ser adjudicado en Licitaciones de bienes, servicios y obra pública y otros procedimientos. Tiene un plazo de vigencia que deberá ser renovado para tener validez.", "options": [
     { "text": "Acceso a ComprasPúblicas", "nextQuestion": "inicioAcceso" },
     { "text": "Inscripción en ROPyCE", "nextQuestion": "inicioInscripcion" }
   ] },
@@ -44,7 +44,7 @@
     { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
     { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
   ] },
-  { "id": "inicioModificacionDeDatos", "content": "👉 ", "options": [
+  { "id": "inicioModificacionDeDatos", "content": "👉 Aquí encontrarás información para: ", "options": [
     { "text": "Alta de Rubros", "nextQuestion": "inicioAltaRubro" },
     { "text": "Vinculación/desvinculación de representante legal", "nextQuestion": "inicioVinculacion" },
     { "text": "Modificación de otros datos", "nextQuestion": "inicioOtrosDatos" }
@@ -70,7 +70,7 @@
     { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
     { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
   ] },
-  { "id": "inicioVinculación", "content": "Aquí encontrarás toda la información sobre cómo Vincular/desvincular un  Representante Legal \n\n 👉https://compraspublicas.cba.gov.ar/modificacion-de-datos/", "options": [
+  { "id": "inicioVinculacion", "content": "Aquí encontrarás toda la información sobre cómo Vincular/desvincular un  Representante Legal \n\n 👉https://compraspublicas.cba.gov.ar/modificacion-de-datos/", "options": [
     { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
     { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
   ] },
@@ -78,7 +78,7 @@
     { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
     { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
   ] },
-  { "id": "inicioRAT", "content": "Aquí encontrarás toda la información sobre el Registro de Antecedentes Técnicos. \n\n 👉https://compraspublicas.cba.gov.ar/registro-de-antecedentes-tecnicos/", "options": [
+  { "id": "inicioRAT", "content": "Aquí encontrarás toda la información sobre el Registro de Antecedentes Técnicos. \n\n 👉https://compraspublicas.cba.gov.ar/rat/", "options": [
     { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
     { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
   ] },
