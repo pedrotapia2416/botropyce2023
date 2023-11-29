@@ -3,6 +3,32 @@
 const chatContainer = document.getElementById('chat-container');
 const userInput = document.getElementById('user-input');
 
+function openChat() {
+    const chatContainer = document.getElementById('container-chat');
+    const openChatButton = document.getElementById('open-chat-button');
+
+    // Muestra el contenedor del chat
+    chatContainer.style.display = 'block';
+    
+    // Oculta el botón de "Abrir Chat" después de abrir el chat
+    openChatButton.style.display = 'none';
+
+    // Inicializa el chat si aún no se ha hecho
+    if (!currentInteraction) {
+        initializeChat();
+    }
+}
+
+function closeChat() {
+    const chatContainer = document.getElementById('container-chat');
+    const openChatButton = document.getElementById('open-chat-button');
+
+    // Oculta el contenedor del chat
+    chatContainer.style.display = 'none';
+
+    // Muestra el botón de "Abrir Chat" después de cerrar el chat
+    openChatButton.style.display = 'block';
+}
 
 const interactions = [
     { "id": "inicioBot", "content": "¿En qué te puedo ayudar?", "options": [
@@ -32,15 +58,20 @@ const interactions = [
     },
     { "id": "inicioQuieroSerProveedor", "content": "Conoce cómo gestionar: \n\n <hr><b>Acceso a ComprasPúblicas:</b>\n Es el primer paso para ser parte del Registro Oficial de Proveedores y Contratistas del Estado (ROPyCE) y participar en procedimientos electrónicos.No tiene vencimiento.\n\n <b>Inscripción en ROPyCE:</b> \n Con la Inscripción en ROPyCE, podrás ser adjudicado en Licitaciones de bienes, servicios y obra pública y otros procedimientos. Tiene un plazo de vigencia que deberá ser renovado para tener validez.", "options": [
         { "text": "Acceso a ComprasPúblicas", "nextQuestion": "inicioAcceso" },
-        { "text": "Inscripción en ROPyCE", "nextQuestion": "inicioInscripcion" }
+        { "text": "Inscripción en ROPyCE", "nextQuestion": "inicioInscripcion" },
+        { "text": "Requisitos a verificar ante ROPyCE", "nextQuestion": "inicioRequisitos" },
+        { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
+
       ] },
       { "id": "inicioAcceso", "content": " Aquí encontrarás toda la información para gestionar el Acceso a ComprasPúblicas.\n\n https://compraspublicas.cba.gov.ar/acceso-a-compras-publicas/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
-        { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
+        { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" },
+        { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
       ] },
       { "id": "inicioInscripcion", "content": "👉 Aquí encontrarás toda la información para gestionar la Inscripción en ROPyCE.\n\n https://compraspublicas.cba.gov.ar/inscripcion-en-ropyce/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
-        { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
+        { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" },
+        
     
       ] },
       { "id": "inicioRenovacion", "content": "👉 Aquí encontrarás toda la información para renovar la Inscripción ROPyCE.\n\n https://compraspublicas.cba.gov.ar/renovacion-en-ropyce/", "options": [
@@ -59,7 +90,8 @@ const interactions = [
       { "id": "inicioModificacionDeDatos", "content": "👉 Aquí encontrarás información para: ", "options": [
         { "text": "Alta de Rubros", "nextQuestion": "inicioAltaRubro" },
         { "text": "Vinculación/desvinculación de representante legal", "nextQuestion": "inicioVinculacion" },
-        { "text": "Modificación de otros datos", "nextQuestion": "inicioOtrosDatos" }
+        { "text": "Modificación de otros datos", "nextQuestion": "inicioOtrosDatos" },
+        { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
       ] },
       { "id": "inicioMesaDeEntrada", "content": "👉 Conocé como enviar la documentación haciendo clic en el siguiente enlace:\n\n https://compraspublicas.cba.gov.ar/compras_insttuto/enviar-documentacion-por-e-tramite/ ", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
@@ -72,9 +104,15 @@ const interactions = [
       { "id": "inicioYaSoyProveedor", "content": "👉 Aquí encontrarás información para:", "options": [
         { "text": "Renovación de Inscripción en ROPyCE", "nextQuestion": "inicioRenovacion" },
         { "text": "Modificación de datos", "nextQuestion": "inicioModificacionDeDatos" },
-        { "text": "Registro de Antecedentes Técnicos", "nextQuestion": "inicioRAT" }
+        { "text": "Registro de Antecedentes Técnicos", "nextQuestion": "inicioRAT" },
+        { "text": "Requisitos a verificar ante ROPyCE", "nextQuestion": "inicioRequisitos" },
+        { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
       ] },
       { "id": "inicioParticipa", "content": "Si eres proveedor ingresá desde aquí: \n\n 👉https://cidi.cba.gov.ar/portal-publico/?app=25 \n\n Si aún no sos proveedor,solicitá tu Acceso en ComprasPúblicas y/o tu Inscripción en ROPyCE  \n\n https://compraspublicas.cba.gov.ar/quiero-ser-proveedor/", "options": [
+        { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
+        { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
+      ] },
+      { "id": "inicioRequisitos", "content": "Desde el siguiente link podrás consultar todos los Requisitos a verificar ante ROPyCE: \n\n 👉https://compraspublicas.cba.gov.ar/requisitos-a-verificar-ropyce/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
@@ -98,7 +136,9 @@ const interactions = [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "finConsulta", "content": "¿Como estuvo la ayuda? ¿Te sirvió?.\n\n Completá la siguiente encuesta para que sigamos mejorando nuestra atención.\n\n https://encuestas.experienciaciudadanacba.gob.ar/limesurvey/index.php/168273?lang=es"}
+      { "id": "finConsulta", "content": "¿Como estuvo la ayuda? ¿Te sirvió?.\n\n Completá la siguiente encuesta para que sigamos mejorando nuestra atención.\n\n https://encuestas.experienciaciudadanacba.gob.ar/limesurvey/index.php/168273?lang=es", "options": [
+        { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
+      ] }
   ];
 let currentInteraction;
 

@@ -71,6 +71,11 @@ button {
     width: 600px;
     border-radius: 20px 20px 0px 0px;
     max-width: 100%;
+    position: fixed;
+    bottom: 0; 
+    right: 20px;
+    height: 550px; 
+    
 }
 .respuesta-bot b {
     font-weight: bold;
@@ -87,6 +92,7 @@ button {
     border-radius: 20px 20px 0px 0px;
     padding:10px;
     color: white;
+    height:  22px;
 
 }
 
@@ -105,4 +111,28 @@ button:hover {
 
 button:active {
     background-color: #68b5e0; /* Cambia el color del botón cuando se hace clic */
+}
+
+#close-chat-button{
+    float: inline-end;
+    background: white;
+    border-radius: 50px !important;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+    color: #00b0d5;
+    font-weight: 600;
+    
+}
+
+#open-chat-button {
+    background-image: url(https://compraspublicas.cba.gov.ar/wp-content/uploads/2023/11/imagen-bot-ropyce.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    background-color: #ffffff00;
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px;
 }

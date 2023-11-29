@@ -8,19 +8,23 @@
     <title>Chatbot</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-    <div class="container-chat">
-        <section class="head-chat" > ChatBot ROPyCE </section>
+    <!-- Agrega un botón para abrir el chat -->
+    <button id="open-chat-button" onclick="openChat()"> </button>
 
+    <!-- Contenedor del chat -->
+    <div class="container-chat" id="container-chat" style="display: none; background-color: white;">
+        <section class="head-chat">
+            ChatBot ROPyCE
+            <!-- Agrega un botón de cerrar (X) -->
+            <button id="close-chat-button" onclick="closeChat()">X</button>
+        </section>
         <section class="box-chat">
             <div id="chat-container"></div>
-            
             <div id="options-container"></div>
         </section>
     </div>
-    
 
     <script src="app.js"></script>
 </body>
