@@ -74,7 +74,7 @@ const interactions = [
         { "text": "Modificación de datos", "nextQuestion": "inicioModificacionDeDatos" },
         { "text": "Registro de Antecedentes Técnicos", "nextQuestion": "inicioRAT" }
       ] },
-      { "id": "inicioParticipa", "content": "Si eres proveedor ingresá desde aquí: \n\n 👉https://cidi.cba.gov.ar/portal-publico/?app=25 \n\n Solicitar tu Acceso en ComprasPúblicas y/o tu Inscripción en ROPyCE \n\n https://compraspublicas.cba.gov.ar/quiero-ser-proveedor/", "options": [
+      { "id": "inicioParticipa", "content": "Si eres proveedor ingresá desde aquí: \n\n 👉https://cidi.cba.gov.ar/portal-publico/?app=25 \n\n Si aún no sos proveedor,solicitá tu Acceso en ComprasPúblicas y/o tu Inscripción en ROPyCE  \n\n https://compraspublicas.cba.gov.ar/quiero-ser-proveedor/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
