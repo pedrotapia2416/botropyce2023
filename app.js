@@ -106,6 +106,7 @@ const interactions = [
         { "text": "Modificación de datos", "nextQuestion": "inicioModificacionDeDatos" },
         { "text": "Registro de Antecedentes Técnicos", "nextQuestion": "inicioRAT" },
         { "text": "Requisitos a verificar ante ROPyCE", "nextQuestion": "inicioRequisitos" },
+        { "text": "Descargar Constancia de Inscripción", "nextQuestion": "inicioConstanciaInscripcion" },
         { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
       ] },
       { "id": "inicioParticipa", "content": "Si eres proveedor ingresá desde aquí: \n\n 👉https://cidi.cba.gov.ar/portal-publico/?app=25 \n\n Si aún no sos proveedor,solicitá tu Acceso en ComprasPúblicas y/o tu Inscripción en ROPyCE  \n\n https://compraspublicas.cba.gov.ar/quiero-ser-proveedor/", "options": [
@@ -113,6 +114,10 @@ const interactions = [
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
       { "id": "inicioRequisitos", "content": "Desde el siguiente link podrás consultar todos los Requisitos a verificar ante ROPyCE: \n\n 👉https://compraspublicas.cba.gov.ar/requisitos-a-verificar-ropyce/", "options": [
+        { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
+        { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
+      ] },
+      { "id": "inicioConstanciaInscripcion", "content": "Desde el siguiente link podrás conocer como descargar la constancia de Inscripción: \n\n 👉https://compraspublicas.cba.gov.ar/compras_insttuto/descargar-constancia-de-inscripcion-en-ropyce/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
