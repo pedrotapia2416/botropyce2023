@@ -1,20 +1,8 @@
-<!-- index.html -->
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Agrega un botón para abrir el chat -->
-    <button id="open-chat-button" onclick="openChat()"> </button>
+ <div>
+      <button id="open-chat-button" onclick="openChat()"> </button>
 
     <!-- Contenedor del chat -->
-    <div class="container-chat" id="container-chat" style="display: none; background-color: white;">
+    <div class="container-chat" id="container-chat" style="display: none; background-color: white; z-index:9999 !important">
         <section class="head-chat">
             ChatBot ROPyCE
             <!-- Agrega un botón de cerrar (X) -->
@@ -25,7 +13,147 @@
             <div id="options-container"></div>
         </section>
     </div>
+ </div>
 
-    <script src="app.js"></script>
-</body>
-</html>
+<style>
+/* style.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+#chat-container, .respuesta-bot, .respuesta-usuario {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#chat-container {
+    max-width: 100%;
+    margin: 0px;
+    padding: 10px;
+    /*border: 1px solid #ccc;*/
+    border-radius: 8px;
+    /*background-color: #f5f5f5;*/
+    overflow-y: auto;
+  height: 350px;
+    min-height: 350px;
+
+}
+
+/* Agrega estilos para los mensajes del bot */
+.respuesta-bot-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea los mensajes del bot a la izquierda */
+    margin-bottom: 8px;
+}
+
+.respuesta-bot {
+    background-color: #e6e6e6; /* Color de fondo del mensaje del bot */
+    padding: 10px;
+    border-radius: 0px 20px 20px 20px;
+}
+
+/* Agrega estilos para los mensajes del usuario */
+.respuesta-usuario-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea los mensajes del usuario a la derecha */
+    margin-bottom: 8px;
+}
+
+.respuesta-usuario {
+    background-color: #d9f4ff; /* Color de fondo del mensaje del usuario */
+    padding: 10px;
+    border-radius: 20px 20px 0px 20px;
+
+}
+
+button {
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    margin: 2px
+;
+    padding: 10px;
+}
+
+.box-chat {
+   padding: 0px 20px 0px 20px;
+
+}
+
+.container-chat{
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(194,194,194,1);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(194,194,194,1);
+    box-shadow: 0px 0px 17px 0px rgba(194,194,194,1);
+    width: 600px;
+    border-radius: 20px 20px 0px 0px;
+    max-width: 100%;
+    position: fixed;
+    bottom: 0; 
+    right: 20px;
+  height: 550px;
+    max-height: 550px; 
+    
+}
+.respuesta-bot b {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.respuesta-usuario b {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.head-chat {
+    background-color: #56AED4;
+    border-radius: 20px 20px 0px 0px;
+    padding:10px;
+    color: white;
+    height:  42px;
+
+}
+
+#chat-container{
+    box-shadow: inset 0px 15px 25px -26px rgba(87,87,87,1);
+}
+
+button {
+    padding: 5px;
+    cursor: pointer; /* Hace que aparezca la mano al pasar el cursor sobre el botón */
+}
+
+button:hover {
+    background-color: #a3d8f4; /* Cambia el color del botón al pasar el cursor sobre él */
+}
+
+button:active {
+    background-color: #68b5e0; /* Cambia el color del botón cuando se hace clic */
+}
+
+#close-chat-button{
+    float: inline-end;
+    background: white;
+    border-radius: 50px !important;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+    color: #00b0d5;
+    font-weight: 600;
+    
+}
+
+#open-chat-button {
+    background-image: url(https://compraspublicas.cba.gov.ar/wp-content/uploads/2023/11/imagen-bot-ropyce.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    background-color: #ffffff00;
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px;
+z-index:99;
+}
+</style>
