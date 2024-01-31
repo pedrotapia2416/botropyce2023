@@ -1,5 +1,3 @@
-// app.js
-
 const chatContainer = document.getElementById('chat-container');
 const userInput = document.getElementById('user-input');
 
@@ -68,32 +66,32 @@ const interactions = [
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" },
         { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioInscripcion", "content": "👉 Aquí encontrarás toda la información para gestionar la Inscripción en ROPyCE.\n\n https://compraspublicas.cba.gov.ar/inscripcion-en-ropyce/", "options": [
+      { "id": "inicioInscripcion", "content": "  Aquí encontrarás toda la información para gestionar la Inscripción en ROPyCE.\n\n https://compraspublicas.cba.gov.ar/inscripcion-en-ropyce/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" },
         
     
       ] },
-      { "id": "inicioRenovacion", "content": "👉 Aquí encontrarás toda la información para renovar la Inscripción ROPyCE.\n\n https://compraspublicas.cba.gov.ar/renovacion-en-ropyce/", "options": [
+      { "id": "inicioRenovacion", "content": "  Aquí encontrarás toda la información para renovar la Inscripción ROPyCE.\n\n https://compraspublicas.cba.gov.ar/renovacion-en-ropyce/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
     
       ] },
-      { "id": "inicioVerificar", "content": "👉 Desde el siguiente link podrás verificá tu estado:\n\n https://compraspublicas.cba.gov.ar/consulta-el-estado-de-tu-solicitud/ \n\n Si contás con Inscripción en ROPyCE, podrás imprimir tu constancia  siguiendo los siguientes pasos.\n\n 👉 https://compraspublicas.cba.gov.ar/wp-content/uploads/2021/05/Descargar-constancia-de-Inscripcion.pdf", "options": [
+      { "id": "inicioVerificar", "content": "  Desde el siguiente link podrás verificá tu estado:\n\n https://compraspublicas.cba.gov.ar/consulta-el-estado-de-tu-solicitud/ \n\n Si contás con Inscripción en ROPyCE, podrás imprimir tu constancia  siguiendo los siguientes pasos.\n\n   https://compraspublicas.cba.gov.ar/wp-content/uploads/2021/05/Descargar-constancia-de-Inscripcion.pdf", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioHabilitacionesEspeciales", "content": "👉 Desde el siguiente link podrás consultar las Habilitaciones Especiales:\n\n https://compraspublicas.cba.gov.ar/buscador-habilitaciones-especiales/", "options": [
+      { "id": "inicioHabilitacionesEspeciales", "content": "  Desde el siguiente link podrás consultar las Habilitaciones Especiales:\n\n https://compraspublicas.cba.gov.ar/buscador-habilitaciones-especiales/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioModificacionDeDatos", "content": "👉 Aquí encontrarás información para: ", "options": [
+      { "id": "inicioModificacionDeDatos", "content": "  Aquí encontrarás información para: ", "options": [
         { "text": "Alta de Rubros", "nextQuestion": "inicioAltaRubro" },
         { "text": "Vinculación/desvinculación de representante legal", "nextQuestion": "inicioVinculacion" },
         { "text": "Modificación de otros datos", "nextQuestion": "inicioOtrosDatos" },
         { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioMesaDeEntrada", "content": "👉 Conocé como enviar la documentación haciendo clic en el siguiente enlace:\n\n https://compraspublicas.cba.gov.ar/compras_insttuto/enviar-documentacion-por-e-tramite/ ", "options": [
+      { "id": "inicioMesaDeEntrada", "content": "  Conocé como enviar la documentación haciendo clic en el siguiente enlace:\n\n https://compraspublicas.cba.gov.ar/compras_insttuto/enviar-documentacion-por-e-tramite/ ", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
@@ -101,7 +99,7 @@ const interactions = [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioYaSoyProveedor", "content": "👉 Aquí encontrarás información para:", "options": [
+      { "id": "inicioYaSoyProveedor", "content": "  Aquí encontrarás información para:", "options": [
         { "text": "Renovación de Inscripción en ROPyCE", "nextQuestion": "inicioRenovacion" },
         { "text": "Modificación de datos", "nextQuestion": "inicioModificacionDeDatos" },
         { "text": "Registro de Antecedentes Técnicos", "nextQuestion": "inicioRAT" },
@@ -109,35 +107,35 @@ const interactions = [
         { "text": "Descargar Constancia de Inscripción", "nextQuestion": "inicioConstanciaInscripcion" },
         { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioParticipa", "content": "Si eres proveedor ingresá desde aquí: \n\n 👉https://cidi.cba.gov.ar/portal-publico/?app=25 \n\n Si aún no sos proveedor,solicitá tu Acceso en ComprasPúblicas y/o tu Inscripción en ROPyCE  \n\n https://compraspublicas.cba.gov.ar/quiero-ser-proveedor/", "options": [
+      { "id": "inicioParticipa", "content": "Si eres proveedor ingresá desde aquí: \n\n  https://cidi.cba.gov.ar/portal-publico/?app=25 \n\n Si aún no sos proveedor,solicitá tu Acceso en ComprasPúblicas y/o tu Inscripción en ROPyCE  \n\n https://compraspublicas.cba.gov.ar/quiero-ser-proveedor/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioRequisitos", "content": "Desde el siguiente link podrás consultar todos los Requisitos a verificar ante ROPyCE: \n\n 👉https://compraspublicas.cba.gov.ar/requisitos-a-verificar-ropyce/", "options": [
+      { "id": "inicioRequisitos", "content": "Desde el siguiente link podrás consultar todos los Requisitos a verificar ante ROPyCE: \n\n  https://compraspublicas.cba.gov.ar/requisitos-a-verificar-ropyce/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioConstanciaInscripcion", "content": "Desde el siguiente link podrás conocer como descargar la constancia de Inscripción: \n\n 👉https://compraspublicas.cba.gov.ar/compras_insttuto/descargar-constancia-de-inscripcion-en-ropyce/", "options": [
+      { "id": "inicioConstanciaInscripcion", "content": "Desde el siguiente link podrás conocer como descargar la constancia de Inscripción: \n\n  https://compraspublicas.cba.gov.ar/compras_insttuto/descargar-constancia-de-inscripcion-en-ropyce/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioInstructivo", "content": "Desde el siguiente link podrás consultar todos los Instructivos: \n\n 👉https://compraspublicas.cba.gov.ar/instructivos/", "options": [
+      { "id": "inicioInstructivo", "content": "Desde el siguiente link podrás consultar todos los Instructivos: \n\n  https://compraspublicas.cba.gov.ar/instructivos/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioAltaRubro", "content": "Aquí encontrarás toda la información sobre cómo dar de Alta un Rubro. \n\n 👉https://compraspublicas.cba.gov.ar/modificacion-de-datos/", "options": [
+      { "id": "inicioAltaRubro", "content": "Aquí encontrarás toda la información sobre cómo dar de Alta un Rubro. \n\n  https://compraspublicas.cba.gov.ar/modificacion-de-datos/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioVinculacion", "content": "Aquí encontrarás toda la información sobre cómo Vincular/desvincular un  Representante Legal \n\n 👉https://compraspublicas.cba.gov.ar/modificacion-de-datos/", "options": [
+      { "id": "inicioVinculacion", "content": "Aquí encontrarás toda la información sobre cómo Vincular/desvincular un  Representante Legal \n\n  https://compraspublicas.cba.gov.ar/modificacion-de-datos/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioOtrosDatos", "content": "Aquí encontrarás toda la información sobre cómo modificar otros datos. \n\n 👉https://compraspublicas.cba.gov.ar/modificacion-de-datos/", "options": [
+      { "id": "inicioOtrosDatos", "content": "Aquí encontrarás toda la información sobre cómo modificar otros datos. \n\n  https://compraspublicas.cba.gov.ar/modificacion-de-datos/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
-      { "id": "inicioRAT", "content": "Aquí encontrarás toda la información sobre el Registro de Antecedentes Técnicos. \n\n 👉https://compraspublicas.cba.gov.ar/rat/", "options": [
+      { "id": "inicioRAT", "content": "Aquí encontrarás toda la información sobre el Registro de Antecedentes Técnicos. \n\n  https://compraspublicas.cba.gov.ar/rat/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" }
       ] },
@@ -203,7 +201,7 @@ function formatBotMessage(message) {
 
     // Luego, convierte las URLs en enlaces
     return messageWithLineBreaks.replace(/\bhttps?:\/\/\S+/gi, match => {
-        return `<a href="${match}" target="_blank">${match}</a>`;
+        return `<a href="${match}" target="_blank" rel="noopener">${match}</a>`;
     });
 }
 
