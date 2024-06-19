@@ -192,7 +192,7 @@ function closeChat() {
 
 const interactions = [
     { "id": "inicioBot", "content": "¿En qué te puedo ayudar?", "options": [
-        { "text": "Quiero ser proveedor", "nextQuestion": "inicioQuieroSerProveedor" },
+        { "text": "Ser proveedor", "nextQuestion": "inicioQuieroSerProveedor" },
         { "text": "Ya soy proveedor", "nextQuestion": "inicioYaSoyProveedor" },
         { "text": "Consultar en qué estado estás", "nextQuestion": "inicioVerificar" },
         { "text": "Buscador de Habilitaciones Especiales", "nextQuestion": "inicioHabilitacionesEspeciales" },
@@ -207,7 +207,7 @@ const interactions = [
       ]
     },
     { "id": "otraConsulta", "content": "¿En qué otro asunto te puedo ayudar?", "options": [
-      { "text": "Quiero ser proveedor", "nextQuestion": "inicioQuieroSerProveedor" },
+      { "text": "Ser proveedor", "nextQuestion": "inicioQuieroSerProveedor" },
         { "text": "Ya soy proveedor", "nextQuestion": "inicioYaSoyProveedor" },
         { "text": "Consultar en qué estado estás", "nextQuestion": "inicioVerificar" },
         { "text": "Buscador de Habilitaciones Especiales", "nextQuestion": "inicioHabilitacionesEspeciales" },
@@ -216,14 +216,14 @@ const interactions = [
         { "text": "Quiero contactar a un agente", "nextQuestion": "inicioContactarAgente" }
     ]
     },
-    { "id": "inicioQuieroSerProveedor", "content": "Conoce cómo gestionar: \n\n <hr><b>Acceso a ComprasPúblicas:</b>\n Es el primer paso para ser parte del Registro Oficial de Proveedores y Contratistas del Estado (ROPyCE) y participar en procedimientos electrónicos.No tiene vencimiento.\n\n <b>Inscripción en ROPyCE:</b> \n Con la Inscripción en ROPyCE, podrás ser adjudicado en Licitaciones de bienes, servicios y obra pública y otros procedimientos. Tiene un plazo de vigencia que deberá ser renovado para tener validez.", "options": [
-        { "text": "Acceso a ComprasPúblicas", "nextQuestion": "inicioAcceso" },
+    { "id": "inicioQuieroSerProveedor", "content": "Conoce cómo gestionar: \n\n <hr><b>Solicitud para ser Proveedor:</b>\n Es el primer paso para ser parte del Registro Oficial de Proveedores y Contratistas del Estado (ROPyCE) y participar en procedimientos electrónicos.No tiene vencimiento.\n\n <b>Inscripción en ROPyCE:</b> \n Con la Inscripción en ROPyCE, podrás ser adjudicado en Licitaciones de bienes, servicios y obra pública y otros procedimientos. Tiene un plazo de vigencia que deberá ser renovado para tener validez.", "options": [
+        { "text": "Solicitar ser Proveedor", "nextQuestion": "inicioAcceso" },
         { "text": "Inscripción en ROPyCE", "nextQuestion": "inicioInscripcion" },
         { "text": "Requisitos a verificar ante ROPyCE", "nextQuestion": "inicioRequisitos" },
         { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
 
       ] },
-      { "id": "inicioAcceso", "content": " Aquí encontrarás toda la información para gestionar el Acceso a ComprasPúblicas.\n\n https://compraspublicas.cba.gov.ar/acceso-a-compras-publicas/", "options": [
+      { "id": "inicioAcceso", "content": " Aquí encontrarás toda la información para solicitar ser Proveedor.\n\n https://compraspublicas.cba.gov.ar/acceso-a-compras-publicas/", "options": [
         { "text": "Gracias, me quedó claro.", "nextQuestion": "finConsulta" },
         { "text": "Quiero hacer otra consulta.", "nextQuestion": "otraConsulta" },
         { "text": "Volver al inicio", "nextQuestion": "otraConsulta" }
